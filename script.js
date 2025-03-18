@@ -1,7 +1,20 @@
-//complete this code
-class Rectangle {}
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
 
-class Square extends Animal {}
+  // Method to calculate area
+  getArea() {
+    return this.width * this.height;
+  }
+}
+
+class Square extends Rectangle {
+  constructor(side) {
+    super(side, side); // Call Rectangle's constructor with equal width and height
+  }
+}
 
 // Do not change the code below this line
 window.Rectangle = Rectangle;
